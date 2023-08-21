@@ -26,4 +26,16 @@ export const UserProvider = ({ children }) => {
         localStorage.setItem("token", JSON.stringify(res.data.token));
       }
     };
-}
+    
+    return (
+        <UserContext.Provider
+        value={{
+            token: state.token,
+            user: state.user,
+            login,
+        }}
+        >
+      {children}
+    </UserContext.Provider>
+  );
+};
