@@ -5,16 +5,16 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { login } = useContext(UserContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   const onFinish = (values) => {
     login(values);
     notification.success({
-        message: 'Successfully logged',
-        description:
-          'Welcome to our e-commerce!!!',
-      });
+      message: "Logged in successfully",
+      description: "Welcome!",
+    });
     setTimeout(() => {
-        navigate("/profile")
+      navigate("/profile");
     }, 3000);
   };
 
@@ -44,7 +44,7 @@ const Login = () => {
             },
             {
               type: "email",
-              message: "Please input a correct email!",
+              message: "Please input a valid email!",
             },
           ]}
         >

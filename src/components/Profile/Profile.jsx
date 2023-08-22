@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
-import { Spin } from "antd";
+import { Card, Spin } from "antd";
 
 const Profile = () => {
   const { user, getUserInfo } = useContext(UserContext);
@@ -13,8 +13,20 @@ const Profile = () => {
   }
 
   return (
-    <div>{user.name}</div>
-  )
+    <div>
+      <Card
+        title={user.name}
+        bordered={true}
+        style={{
+          width: 300,
+          borderColor:"pink",
+          marginTop:"10px"
+        }}
+      >
+        <p>{user.email}</p>
+      </Card>
+    </div>
+  );
 }
 
 export default Profile

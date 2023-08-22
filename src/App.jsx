@@ -7,6 +7,7 @@ import "./App.scss";
 
 import Login from "./components/Login/Login";
 import Profile from "./components/Profile/Profile";
+import Header from "./components/Header/Header";
 
 
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <UserProvider>
+        <Header/>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
