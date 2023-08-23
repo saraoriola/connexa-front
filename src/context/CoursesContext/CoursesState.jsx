@@ -4,6 +4,7 @@ import CoursesReducer from "./CoursesReducer";
 
 const initialState = {
   courses: [],
+  cart:[],
 };
 
 const API_URL = "http://localhost:3000";
@@ -21,11 +22,19 @@ export const CoursesProvider = ({ children }) => {
       return res;
     };
 
+    const addCart = (course) => {
+        dispatch({
+          type: "ADD_CART",
+          payload: course,
+        });
+      };
+
     return (
         <CoursesContext.Provider
           value={{
             courses: state.courses,
-            getCourses
+            getCourses, 
+            addCart
           }}
         >
           {children}

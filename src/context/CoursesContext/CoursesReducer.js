@@ -5,6 +5,13 @@ const courses = (state, action) => {
           ...state,
           courses: action.payload,
         };
+
+       case "ADD_CART":
+            return {
+              ...state,
+              cart: [action.payload, ...state.cart],
+            };
+
       default:
         return state;
     }

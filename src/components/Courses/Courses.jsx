@@ -4,7 +4,7 @@ import "./Courses.scss";
 import { CoursesContext } from "../../context/CoursesContext/CoursesState";
 
 const Courses = () => {
-  const { getCourses, courses } = useContext(CoursesContext);
+  const { getCourses, courses, addCart, cart } = useContext(CoursesContext);
 
   useEffect(() => {
     getCourses();
