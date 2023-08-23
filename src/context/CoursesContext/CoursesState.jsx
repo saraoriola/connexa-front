@@ -13,7 +13,7 @@ export const CoursesProvider = ({ children }) => {
     const [state, dispatch] = useReducer(CoursesReducer, initialState);
   
     const getCourses = async () => {
-      const res = await axios.get(API_URL + "/courses");
+      const res = await axios.get(API_URL + "/courses/getCourses");
       dispatch({
         type: "GET_COURSES",
         payload: res.data,
