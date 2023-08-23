@@ -18,6 +18,7 @@ const Header = () => {
         <>
             <Link to="/profile"><UserOutlined /> </Link> 
             <button onClick={logoutUser}><UserDeleteOutlined /></button>
+            <Link to="/">Home </Link>
         </> 
         ) : (
             <Link to="/login"><UserAddOutlined /></Link>
