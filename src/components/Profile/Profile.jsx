@@ -8,6 +8,7 @@ const Profile = () => {
   useEffect(() => {
     getUserInfo();
   }, []);
+
   if (!user) {
     return <Spin size="large" />;
   }
@@ -19,8 +20,8 @@ const Profile = () => {
         bordered={true}
         style={{
           width: 300,
-          borderColor:"pink",
-          marginTop:"10px"
+          borderColor: "pink",
+          marginTop: "10px"
         }}
       >
         <p>{user.email}</p>
@@ -29,4 +30,4 @@ const Profile = () => {
   );
 }
 
-export default Profile
+export default Profile;

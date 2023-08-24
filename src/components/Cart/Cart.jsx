@@ -11,11 +11,11 @@ const Cart = () => {
       <Divider orientation="left">Cart</Divider>
       <List
         size="small"
-        header={<div>Productos</div>}
+        header={<div>Products</div>}
         footer={
           <div>
             <button onClick={()=>{
-            }}>Comprar</button>
+            }}>Buy</button>
           </div>
         }
         bordered

@@ -9,7 +9,8 @@ const Header = () => {
     const { token, logout } = useContext(UserContext);
     const { cart } = useContext(CoursesContext);
     const navigate = useNavigate();
-        useEffect(() => {
+
+    useEffect(() => {
       localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
   
@@ -17,34 +18,35 @@ const Header = () => {
       logout();
       navigate("/login");
     };
-  return (
-    <div>
-        <Link to="/"><HomeOutlined                 
-        style={{ color: "#f8ff7a", width: "50px" }}/> </Link>
-    {
-        token ? (
-        <>
-          <Link to="/cart" style={{ marginRight: "5px" }}>
-            <Badge
-              count={cart.length}
-              size="small"
-              style={{ marginRight: "5px" }}
-            >
-              <ShoppingCartOutlined
-                style={{ color: "#f8ff7a", width: "50px" }}
-              />
-            </Badge>
+
+    return (
+      <div>
+          <Link to="/">
+            <HomeOutlined style={{ color: "#f8ff7a", width: "50px" }}/>
           </Link>
-            <Link to="/profile"><UserOutlined                 
-            style={{ color: "#f8ff7a", width: "50px" }}/> </Link> 
-            <button onClick={logoutUser}><UserDeleteOutlined /></button>
-        </> 
-        ) : (
-            <Link to="/login"><UserAddOutlined /></Link>
-        )
-    }
-    </div>
-  );
+        {
+            token ? (
+            <>
+              <Link to="/cart" style={{ marginRight: "5px" }}>
+                <Badge count={cart.length} size="small" style={{ marginRight: "5px" }}>
+                  <ShoppingCartOutlined style={{ color: "#f8ff7a", width: "50px" }}/>
+                </Badge>
+              </Link>
+              <Link to="/profile">
+                <UserOutlined style={{ color: "#f8ff7a", width: "50px" }}/>
+              </Link> 
+              <button onClick={logoutUser}>
+                <UserDeleteOutlined />
+              </button>
+            </> 
+            ) : (
+                <Link to="/login">
+                  <UserAddOutlined />
+                </Link>
+            )
+        }
+      </div>
+    );
 };
 
 export default Header;

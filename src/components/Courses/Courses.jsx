@@ -29,7 +29,7 @@ const Courses = () => {
             }}
           >
             <p>{course.price} €</p>
-            <button onClick={() => addCart(course)}>Add cart</button>
+            <button onClick={() => addCart(course)}>Add to Cart</button>
           </Card>
         );
       })}
