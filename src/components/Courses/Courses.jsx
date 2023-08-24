@@ -10,6 +10,10 @@ const Courses = () => {
     getCourses();
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart])
+
   return (
     <div className="courses-container">
       {courses.map((course) => {
