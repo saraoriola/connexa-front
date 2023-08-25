@@ -29,6 +29,11 @@ export const CoursesProvider = ({ children }) => {
       payload: course,
     });
   };
+  const clearCart = () => {
+    dispatch({
+      type: "CLEAR_CART",
+    });
+  };
   
   return (
     <CoursesContext.Provider
@@ -37,6 +42,7 @@ export const CoursesProvider = ({ children }) => {
         cart: state.cart,
         getCourses,
         addCart,
+        clearCart,
       }}
     >
       {children}

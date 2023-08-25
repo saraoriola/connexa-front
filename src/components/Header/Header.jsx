@@ -12,7 +12,7 @@ const Header = () => {
 
     useEffect(() => {
       localStorage.setItem("cart", JSON.stringify(cart));
-    }, [cart]);
+    }, [cart])
   
     const logoutUser = () => {
       logout();

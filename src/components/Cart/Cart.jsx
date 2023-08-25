@@ -1,21 +1,24 @@
 import React, { useContext } from "react";
-import { Divider, List } from "antd";
 import { CoursesContext } from "../../context/CoursesContext/CoursesState";
+import { Divider, List } from "antd";
 
 const Cart = () => {
-  const { cart } = useContext(CoursesContext);
-  const data = cart.map((product) => product.name);
+  const { cart, clearCart } = useContext(CoursesContext);
+
+  const data = cart.map((course) => course.name);
 
   return (
     <div>
       <Divider orientation="left">Cart</Divider>
       <List
         size="small"
-        header={<div>Products</div>}
+        header={<div>Courses</div>}
         footer={
           <div>
+            <button onClick={clearCart}>Vaciar carrito</button>
             <button onClick={()=>{
-            }}>Buy</button>
+                clearCart()
+            }}>Comprar</button>
           </div>
         }
         bordered
