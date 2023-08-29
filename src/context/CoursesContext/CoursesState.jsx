@@ -6,10 +6,11 @@ const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const initialState = {
   courses: [],
-  cart: cart,
+  cart:  cart,
 };
 
 const API_URL = "http://localhost:3000";
+
 export const CoursesContext = createContext(initialState);
 
 export const CoursesProvider = ({ children }) => {

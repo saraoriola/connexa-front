@@ -1,9 +1,14 @@
 import React, { useContext } from "react";
 import { CoursesContext } from "../../context/CoursesContext/CoursesState";
 import { Divider, List } from "antd";
+import { OrdersContext } from "../../context/OrdersContext/OrdersState";
+import { useNavigate } from "react-router-dom";
+
 
 const Cart = () => {
   const { cart, clearCart } = useContext(CoursesContext);
+  const {createOrder} = useContext(OrdersContext);
+  const navigate = useNavigate();
 
   const data = cart.map((course) => course.name);
 
@@ -17,8 +22,9 @@ const Cart = () => {
           <div>
             <button onClick={clearCart}>Vaciar carrito</button>
             <button onClick={()=>{
+                createOrder(cart)
                 clearCart()
-            }}>Comprar</button>
+            }}>Buy</button>
           </div>
         }
         bordered
