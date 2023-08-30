@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom"; 
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext/UserState";
 import { CoursesContext } from "../../context/CoursesContext/CoursesState";
 import { HomeOutlined, ShoppingCartOutlined, UserAddOutlined, UserDeleteOutlined, UserOutlined } from "@ant-design/icons";
@@ -43,8 +43,7 @@ const Header = () => {
         </>
       ) : (
         <>
-<Link to="/login" className="icon-link login-link">Login</Link>
-
+          <Link to="/login" className="icon-link login-link">Login</Link>
 
           <Link to="/register" className="signup-link">           
             Sign Up <UserAddOutlined />
