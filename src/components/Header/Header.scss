@@ -1,0 +1,79 @@
+@import "/src/colors.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-color: $black-color;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  .icon-link {
+    color: $yellow-color;
+    width: 50px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      color: $darkgrey-color;
+    }
+  }
+
+  .login-link {
+    border: 1px solid $yellow-color;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: $yellow-color;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .badge-icon-link {
+    margin-right: 5px;
+
+    .ant-badge-count {
+      background-color: $yellow-color;
+      color: $black-color;
+    }
+
+    .anticon {
+      color: $yellow-color;
+      width: 50px;
+    }
+  }
+
+  .user-icon {
+    color: $yellow-color;
+    width: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      background-color: $darkgrey-color;
+      color: $white-color;
+    }
+  }
+
+  .signup-link {
+    color: $black-color;
+    background-color: $yellow-color;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 50px;
+
+    &:hover {
+      background-color: $darkgrey-color;
+      color: $white-color;
+    }
+  }
+}

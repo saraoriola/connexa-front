@@ -4,6 +4,7 @@ import { UserContext } from "../../context/UserContext/UserState";
 import { CoursesContext } from "../../context/CoursesContext/CoursesState";
 import { HomeOutlined, ShoppingCartOutlined, UserAddOutlined, UserDeleteOutlined, UserOutlined } from "@ant-design/icons";
 import { Badge } from "antd";
+import "./Header.scss";
 
 const Header = () => {
   const { token, logout } = useContext(UserContext);
@@ -20,34 +21,33 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <Link to="/">
-        <HomeOutlined style={{ color: "#f8ff7a", width: "50px" }} />
+    <div className="header">
+      <Link to="/" className="icon-link">
+        <HomeOutlined />
       </Link>
       {token ? (
         <>
-          <Link to="/cart" style={{ marginRight: "5px" }}>
-            <Badge count={cart.length} size="small" style={{ marginRight: "5px" }}>
-              <ShoppingCartOutlined style={{ color: "#f8ff7a", width: "50px" }} />
+          <Link to="/cart" className="badge-icon-link">
+            <Badge count={cart.length} size="small">
+              <ShoppingCartOutlined />
             </Badge>
           </Link>
 
-          <Link to="/profile">
-            <UserOutlined style={{ color: "#f8ff7a", width: "50px" }} />
+          <Link to="/profile" className="icon-link">
+            <UserOutlined />
           </Link>
 
-          <button onClick={logoutUser}>
+          <button className="user-icon" onClick={logoutUser}>
             <UserDeleteOutlined />
           </button>
         </>
       ) : (
         <>
-          <Link to="/login">
-            <UserAddOutlined />
-          </Link>
+<Link to="/login" className="icon-link login-link">Login</Link>
 
-          <Link to="/register">           
-            Sign Up
+
+          <Link to="/register" className="signup-link">           
+            Sign Up <UserAddOutlined />
           </Link>
         </>
       )}
