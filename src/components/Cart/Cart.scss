@@ -1,7 +1,7 @@
 @import "/src/colors.scss";
 
 .cart-container {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   background-color: $white-color;
@@ -47,14 +47,17 @@
 }
 
 .cart-button-empty {
-  background-color: $lightgrey-color;
-  color: $black-color;
-}
-
-.cart-button-empty:hover {
-  background-color: $darkgrey-color;
-  color: $white-color;
-}
+    background-color: $white-color;
+    color: $darkgrey-color;
+    border: 1px solid $black-color;
+  }
+  
+  .cart-button-empty:hover {
+    background-color: $white-color;
+    color: $darkgrey-color;
+    border: 1px solid $black-color;
+  }
+  
 
 .cart-button-buy {
   background-color: $yellow-color;

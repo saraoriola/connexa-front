@@ -50,12 +50,15 @@
   }
 
   .user-icon {
-    color: $yellow-color;
-    width: 50px;
+    background-color: $yellow-color;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: $black-color;
+    text-decoration: none;
+    margin-right: 50px;
     cursor: pointer;
-    background-color: transparent;
     border: none;
-
+  
     &:hover {
       background-color: $darkgrey-color;
       color: $white-color;
