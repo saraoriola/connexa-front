@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { CoursesContext } from "../../context/CoursesContext/CoursesState";
 import { Divider, List } from "antd";
 import { OrdersContext } from "../../context/OrdersContext/OrdersState";
-import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cart, clearCart } = useContext(CoursesContext);
