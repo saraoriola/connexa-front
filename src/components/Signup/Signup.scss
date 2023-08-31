@@ -1,6 +1,6 @@
 @import "/src/colors.scss";
 
-.login-container {
+.signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@
   background-color: $lightgrey-color;
 }
 
-.login-form {
+.signup-form {
   max-width: 400px;
   width: 100%;
   padding: 20px;
@@ -17,13 +17,13 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.login-title {
+.signup-title {
   font-size: 2em;
   margin-bottom: 1em;
   color: $darkgrey-color;
 }
 
-.login-input {
+.signup-input {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5em;
@@ -48,7 +48,7 @@
   }
 }
 
-.login-button {
+.signup-button {
   width: 100%;
   padding: 10px;
   background-color: $darkgrey-color;
@@ -61,41 +61,26 @@
   transition: background-color 0.25s, color 0.25s;
 }
 
-.login-button:hover {
+.signup-button:hover {
   background-color: $yellow-color;
   color: $darkgrey-color;
 }
 
-.login-button:focus {
+.signup-button:focus {
   outline: none;
 }
 
-.login-link {
-  color: $yellow-color;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.25s;
-}
-
-.login-link:hover {
-  color: $darkgrey-color;
-}
-
 @media (prefers-color-scheme: light) {
-  .login-container {
+  .signup-container {
     background-color: $white-color;
   }
 
-  .login-form {
+  .signup-form {
     background-color: $lightgrey-color;
   }
 
-  .login-button {
+  .signup-button {
     background-color: $lightgrey-color;
     color: $black-color;
-  }
-
-  .login-link {
-    color: $yellow-color;
   }
 }

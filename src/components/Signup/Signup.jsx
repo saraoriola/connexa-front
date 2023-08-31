@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Button, Form, Input, notification } from "antd";
 import { UserContext } from "../../context/UserContext/UserState";
 import { useNavigate } from "react-router-dom";
+import "./Signup.scss";
 
 const Signup = () => {
   const { register } = useContext(UserContext);
@@ -22,8 +23,9 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className="signup-container">
       <Form
+        className="signup-form"
         name="basic"
         labelCol={{
           span: 8,
@@ -31,13 +33,12 @@ const Signup = () => {
         wrapperCol={{
           span: 16,
         }}
-        style={{
-          maxWidth: 600,
-        }}
         onFinish={onSubmit}
         autoComplete="off"
       >
+        <h1 className="signup-title">Sign Up</h1>
         <Form.Item
+          className="signup-input"
           label="Name"
           name="name"
           rules={[
@@ -50,6 +51,7 @@ const Signup = () => {
           <Input />
         </Form.Item>
         <Form.Item
+          className="signup-input"
           label="Last name"
           name="lastname"
           rules={[
@@ -61,8 +63,8 @@ const Signup = () => {
         >
           <Input />
         </Form.Item>
-
         <Form.Item
+          className="signup-input"
           label="Email"
           name="email"
           rules={[
@@ -79,6 +81,7 @@ const Signup = () => {
           <Input />
         </Form.Item>
         <Form.Item
+          className="signup-input"
           label="Password"
           name="password"
           rules={[
@@ -90,14 +93,13 @@ const Signup = () => {
         >
           <Input.Password />
         </Form.Item>
-
         <Form.Item
           wrapperCol={{
             offset: 8,
             span: 16,
           }}
         >
-          <Button type="primary" htmlType="submit">
+          <Button className="signup-button" type="primary" htmlType="submit">
             Sign Up
           </Button>
         </Form.Item>

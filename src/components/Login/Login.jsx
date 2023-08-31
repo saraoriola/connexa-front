@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Button, Form, Input, notification } from "antd";
 import { UserContext } from "../../context/UserContext/UserState";
 import { useNavigate } from "react-router-dom";
-
+import "./Login.scss"; 
 
 const Login = () => {
   const { login } = useContext(UserContext);
@@ -20,22 +20,22 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <Form
+        className="login-form"
         name="basic"
         labelCol={{
-          span: 8,
+          span: 24,
         }}
         wrapperCol={{
-          span: 16,
-        }}
-        style={{
-          maxWidth: 600,
+          span: 24,
         }}
         onFinish={onFinish}
         autoComplete="off"
       >
+        <h1 className="login-title">Welcome!</h1>
         <Form.Item
+          className="login-input"
           label="Email"
           name="email"
           rules={[
@@ -53,6 +53,7 @@ const Login = () => {
         </Form.Item>
 
         <Form.Item
+          className="login-input"
           label="Password"
           name="password"
           rules={[
@@ -67,11 +68,11 @@ const Login = () => {
 
         <Form.Item
           wrapperCol={{
-            offset: 8,
-            span: 16,
+            offset: 0,
+            span: 24,
           }}
         >
-          <Button type="primary" htmlType="submit">
+          <Button className="login-button" type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>

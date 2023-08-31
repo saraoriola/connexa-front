@@ -9,7 +9,7 @@ import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
 import Courses from "./components/Courses/Courses";
 import Cart from "./components/Cart/Cart";
-import Signup from "./components/SignUp/Singup";
+import Signup from "./components/SignUp/Signup";
 
 function App() {
   return (
