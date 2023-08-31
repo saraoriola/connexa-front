@@ -68,3 +68,5 @@ We welcome contributions to our application! If you'd like to collaborate, pleas
 If you have any questions or comments, feel free to get in touch with us via email 
 
 © 2023 E-commerce B2B App. All rights reserved.
+
+![Tester](src/assets/pasos.gif)
