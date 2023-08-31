@@ -4,6 +4,7 @@ import { UserContext } from "../../context/UserContext/UserState";
 import { CoursesContext } from "../../context/CoursesContext/CoursesState";
 import { HomeOutlined, ShoppingCartOutlined, UserAddOutlined, UserDeleteOutlined, UserOutlined } from "@ant-design/icons";
 import { Badge } from "antd";
+
 import "./Header.scss";
 
 const Header = () => {
@@ -22,6 +23,8 @@ const Header = () => {
 
   return (
     <div className="header">
+
+
       <Link to="/" className="icon-link">
         <HomeOutlined />
       </Link>

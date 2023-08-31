@@ -1,10 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Card, Spin } from "antd";
+import { Calendar } from 'antd';
 import "./Profile.scss";
 
 const Profile = () => {
   const { user, getUserInfo} = useContext(UserContext);
+
+  const onPanelChange = (value, mode) => {
+    console.log(value.format('YYYY-MM-DD'), mode);
+  };
 
   useEffect(() => {
     getUserInfo();
@@ -29,6 +34,8 @@ const Profile = () => {
         <p>Company: {user.company}</p>
       </Card>
 
+      <Calendar onPanelChange={onPanelChange} />;
+      
     </div>
   );
 };

@@ -1,6 +1,7 @@
 @import "/src/colors.scss";
 
 .courses-container {
+  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -25,16 +26,10 @@
   margin-bottom: 10px;
 }
 
-.course-price {
-  font-size: 1.2rem;
-  color: $yellow-color;
-  margin-bottom: 10px;
-}
-
 .add-to-cart-button {
   background-color: transparent;
   color: $black-color;
-  border: 1px solid $black-color;
+  border: 0.5px solid $black-color;
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;

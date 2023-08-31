@@ -24,6 +24,35 @@ const Signup = () => {
 
   return (
     <div className="signup-container">
+     <div className="desktop">
+      <div className="group-wrapper">
+        <div className="group">
+          <div className="vectores">
+            <div className="overlap-group">
+              <div className="rectangle" />
+              <div className="div" />
+              <div className="rectangle-2" />
+              <div className="rectangle-3" />
+            </div>
+          </div>
+          <div className="text">
+            <p className="text-wrapper">
+              Cursos innovadores, charlas inspiradoras y una comunidad de expertos para alcanzar tus metas profesionales.
+            </p>
+            <p className="descubre-tu">
+              <span className="span">
+                Descubre tu <br />
+              </span>
+              <span className="text-wrapper-2">
+                potencial <br />
+                profesional <br />
+              </span>
+              <span className="span">con Connexa.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
       <Form
         className="signup-form"
         name="basic"
@@ -36,7 +65,6 @@ const Signup = () => {
         onFinish={onSubmit}
         autoComplete="off"
       >
-        <h1 className="signup-title">Sign Up</h1>
         <Form.Item
           className="signup-input"
           label="Name"
