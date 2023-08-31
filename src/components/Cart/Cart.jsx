@@ -4,11 +4,9 @@ import { Divider, List } from "antd";
 import { OrdersContext } from "../../context/OrdersContext/OrdersState";
 import { useNavigate } from "react-router-dom";
 
-
 const Cart = () => {
   const { cart, clearCart } = useContext(CoursesContext);
-  const {createOrder} = useContext(OrdersContext);
-  const navigate = useNavigate();
+  const { createOrder } = useContext(OrdersContext);
 
   const data = cart.map((course) => course.name);
 
@@ -20,10 +18,10 @@ const Cart = () => {
         header={<div>Courses</div>}
         footer={
           <div>
-            <button onClick={clearCart}>Vaciar carrito</button>
-            <button onClick={()=>{
-                createOrder(cart)
-                clearCart()
+            <button onClick={clearCart}>Empty Cart</button>
+            <button onClick={() => {
+                createOrder(cart);
+                clearCart();
             }}>Buy</button>
           </div>
         }
