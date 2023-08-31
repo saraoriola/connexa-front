@@ -1,0 +1,67 @@
+@import "/src/colors.scss";
+
+.cart-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $white-color;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-divider {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: $darkgrey-color;
+}
+
+.cart-list {
+  border: 1px solid $darkgrey-color;
+  border-radius: 8px;
+}
+
+.cart-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: $lightgrey-color;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.cart-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.cart-button-empty {
+  background-color: $lightgrey-color;
+  color: $black-color;
+}
+
+.cart-button-empty:hover {
+  background-color: $darkgrey-color;
+  color: $white-color;
+}
+
+.cart-button-buy {
+  background-color: $yellow-color;
+  color: $darkgrey-color;
+}
+
+.cart-button-buy:hover {
+  background-color: $darkgrey-color;
+  color: $white-color;
+}

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CoursesContext } from "../../context/CoursesContext/CoursesState";
 import { Divider, List } from "antd";
 import { OrdersContext } from "../../context/OrdersContext/OrdersState";
+import "./Cart.scss"; 
 
 const Cart = () => {
   const { cart, clearCart } = useContext(CoursesContext);
@@ -10,23 +11,33 @@ const Cart = () => {
   const data = cart.map((course) => course.name);
 
   return (
-    <div>
-      <Divider orientation="left">Cart</Divider>
+    <div className="cart-container">
+      <Divider className="cart-divider" orientation="left">
+        Cart
+      </Divider>
       <List
         size="small"
-        header={<div>Courses</div>}
+        header={<div className="cart-header">Courses</div>}
         footer={
-          <div>
-            <button onClick={clearCart}>Empty Cart</button>
-            <button onClick={() => {
+          <div className="cart-footer">
+            <button className="cart-button cart-button-empty" onClick={clearCart}>
+              Empty Cart
+            </button>
+            <button
+              className="cart-button cart-button-buy"
+              onClick={() => {
                 createOrder(cart);
                 clearCart();
-            }}>Buy</button>
+              }}
+            >
+              Buy
+            </button>
           </div>
         }
         bordered
         dataSource={data}
         renderItem={(item) => <List.Item>{item}</List.Item>}
+        className="cart-list"
       />
     </div>
   );
