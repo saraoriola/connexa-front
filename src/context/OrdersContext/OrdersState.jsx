@@ -8,7 +8,6 @@ export const OrdersContext = createContext();
 export const OrdersProvider = ({ children }) => {
   const createOrder = async (order) => {
     const token = JSON.parse(localStorage.getItem("token"));
-console.log(order)
     try {
       await axios.post(
         API_URL + "/orders/create",
