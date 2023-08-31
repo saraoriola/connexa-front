@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import React, { createContext, useReducer } from "react";
 import axios from "axios";
 import UserReducer from "./UserReducer";
 
@@ -58,7 +58,6 @@ export const UserProvider = ({ children }) => {
         authorization: token,
       },
     });
-
     dispatch({
       type: "LOGOUT",
       payload: res.data,
@@ -66,6 +65,19 @@ export const UserProvider = ({ children }) => {
     if (res.data) {
       localStorage.removeItem("token");
     }
+  };
+
+  const getCourseAndOrders = async () => {
+    const token = JSON.parse(localStorage.getItem('token'));
+    const res = await axios.get(API_URL + "/orders/orders", {
+      headers: {
+        authorization: token,
+      },
+    });
+    dispatch({
+      type: 'GET_USER_COURSE_ORDERS',
+      payload: res.data.courseOrders,
+    });
   };
 
   return (
@@ -77,6 +89,7 @@ export const UserProvider = ({ children }) => {
         register,
         getUserInfo,
         logout,
+        getCourseAndOrders,
       }}
     >
       {children}

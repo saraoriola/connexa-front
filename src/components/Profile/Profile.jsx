@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Card, Spin } from "antd";
+import "./Profile.scss";
 
 const Profile = () => {
-  const { user, getUserInfo } = useContext(UserContext);
+  const { user, getUserInfo} = useContext(UserContext);
 
   useEffect(() => {
     getUserInfo();
@@ -13,21 +14,23 @@ const Profile = () => {
     return <Spin size="large" />;
   }
 
+
   return (
-    <div>
+    <div className="profile-container">
+      <h1 className="welcome-message">Hi, {user.name}!</h1>
       <Card
-        title={user.name}
+        title="User Information"
         bordered={true}
-        style={{
-          width: 300,
-          borderColor: "pink",
-          marginTop: "10px"
-        }}
+        className="full-width-card"
       >
-        <p>{user.email}</p>
+        <p>Name: {user.name} {user.lastName}</p>
+        <p>Email: {user.email}</p>
+        <p>Role: {user.role}</p>
+        <p>Company: {user.company}</p>
       </Card>
+
     </div>
   );
-}
+};
 
 export default Profile;

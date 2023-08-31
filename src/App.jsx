@@ -10,6 +10,7 @@ import Header from "./components/Header/Header";
 import Courses from "./components/Courses/Courses";
 import Cart from "./components/Cart/Cart";
 import Signup from "./components/SignUp/Signup";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/register" element={<Signup />} />
           </Routes>
+          <Footer />
           </OrdersProvider>
         </CoursesProvider>
       </UserProvider>

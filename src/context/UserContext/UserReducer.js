@@ -25,6 +25,12 @@ const users = (state, action) => {
         token: null,
       };
 
+      case 'GET_USER_COURSE_ORDERS':
+        return {
+          ...state,
+          courseOrders: action.payload,
+        };
+
     default:
       return state;
   }

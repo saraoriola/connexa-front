@@ -21,62 +21,91 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <Form
-        className="login-form"
-        name="basic"
-        labelCol={{
-          span: 24,
-        }}
-        wrapperCol={{
-          span: 24,
-        }}
-        onFinish={onFinish}
-        autoComplete="off"
-      >
-        <h1 className="login-title">Welcome!</h1>
-        <Form.Item
-          className="login-input"
-          label="Email"
-          name="email"
-          rules={[
-            {
-              required: true,
-              message: "Please input your email!",
-            },
-            {
-              type: "email",
-              message: "Please input a valid email!",
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
+     <div className="desktop">
+      <div className="group-wrapper">
+        <div className="group">
+          <div className="vectores">
+            <div className="overlap-group">
+              <div className="rectangle" />
+              <div className="div" />
+              <div className="rectangle-2" />
+              <div className="rectangle-3" />
+            </div>
+          </div>
+          <div className="text">
+            <p className="text-wrapper">
+              Cursos innovadores, charlas inspiradoras y una comunidad de expertos para alcanzar tus metas profesionales.
+            </p>
+            <p className="descubre-tu">
+              <span className="span">
+                Descubre tu <br />
+              </span>
+              <span className="text-wrapper-2">
+                potencial <br />
+                profesional <br />
+              </span>
+              <span className="span">con Connexa.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <Form.Item
-          className="login-input"
-          label="Password"
-          name="password"
-          rules={[
-            {
-              required: true,
-              message: "Please input your password!",
-            },
-          ]}
-        >
-          <Input.Password />
-        </Form.Item>
+<Form
+  className="login-form"
+  name="basic"
+  labelCol={{
+    span: 24,
+  }}
+  wrapperCol={{
+    span: 24,
+  }}
+  onFinish={onFinish}
+  autoComplete="off"
+>
+  <Form.Item
+    className="login-input"
+    label="Email"
+    name="email"
+    rules={[
+      {
+        required: true,
+        message: "Please input your email!",
+      },
+      {
+        type: "email",
+        message: "Please input a valid email!",
+      },
+    ]}
+  >
+    <Input />
+  </Form.Item>
 
-        <Form.Item
-          wrapperCol={{
-            offset: 0,
-            span: 24,
-          }}
-        >
-          <Button className="login-button" type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
-      </Form>
+  <Form.Item
+    className="login-input"
+    label="Password"
+    name="password"
+    rules={[
+      {
+        required: true,
+        message: "Please input your password!",
+      },
+    ]}
+  >
+    <Input.Password />
+  </Form.Item>
+
+  <Form.Item
+    wrapperCol={{
+      offset: 0,
+      span: 24,
+    }}
+  >
+    <Button className="login-button" type="primary" htmlType="submit">
+      Submit
+    </Button>
+  </Form.Item>
+</Form>
     </div>
   );
 };

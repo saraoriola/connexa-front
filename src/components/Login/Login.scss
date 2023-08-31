@@ -1,11 +1,16 @@
 @import "/src/colors.scss";
 
-.login-container {
+body {
+  background-image: url(src/assets/connexa.jpg);
   display: flex;
-  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: $lightgrey-color;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .login-form {
@@ -70,17 +75,6 @@
   outline: none;
 }
 
-.login-link {
-  color: $yellow-color;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.25s;
-}
-
-.login-link:hover {
-  color: $darkgrey-color;
-}
-
 @media (prefers-color-scheme: light) {
   .login-container {
     background-color: $white-color;
@@ -94,8 +88,121 @@
     background-color: $lightgrey-color;
     color: $black-color;
   }
+}
 
-  .login-link {
-    color: $yellow-color;
-  }
+.desktop {
+  width: 80%;
+  margin-right: 200px;
+}
+
+.desktop .group-wrapper {
+  height: 1024px;
+}
+
+.desktop .group {
+  left: 74px;
+  position: relative;
+  top: 350px;
+  width: 572px;
+}
+
+.desktop .vectores {
+  height: 300px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 300px;
+}
+
+.desktop .overlap-group {
+  height: 300px;
+  position: relative;
+}
+
+.desktop .rectangle {
+  background-color: $lightgrey-color;
+  border-radius: 100px 0px 0px 0px;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150px;
+}
+
+.desktop .div {
+  background-color: $yellow-color;
+  border-radius: 0px 0px 100px 0px;
+  box-shadow: inset 0px 4px 4px #00000040;
+  height: 150px;
+  left: 150px;
+  position: absolute;
+  top: 0;
+  width: 150px;
+}
+
+.desktop .rectangle-2 {
+  background-color: $darkgrey-color;
+  border-radius: 100px;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 150px;
+  width: 150px;
+}
+
+.desktop .rectangle-3 {
+  background-color:$black-color;
+  border-radius: 0px 80px 0px 80px;
+  box-shadow: 0px 4px 4px $black-color;
+  height: 150px;
+  left: 108px;
+  position: absolute;
+  top: 117px;
+  width: 150px;
+}
+
+.desktop .text {
+  height: 324px;
+  left: 337px;
+  position: absolute;
+  top: 0;
+  width: 239px;
+}
+
+.desktop .text-wrapper {
+  color: $black-color;
+  font-family: "DM Sans-Regular", Helvetica;
+  font-size: 19px;
+  font-weight: 400;
+  left: 1px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 157px;
+  width: 234px;
+  text-align: left;
+}
+
+.desktop .descubre-tu {
+  color: $black-color;
+  font-family: "DM Sans-Bold", Helvetica;
+  font-size: 31px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 36px;
+  position: absolute;
+  top: 0;
+}
+
+.desktop .span {
+  font-weight: 700;
+  
+
+}
+
+.desktop .text-wrapper-2 {
+  font-family: "DM Sans-BoldItalic", Helvetica;
+  font-style: italic;
+  font-weight: 700;
 }
